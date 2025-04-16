@@ -27,7 +27,19 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: BottomAppBar(child: Text('BottomAppBar')),
+      floatingActionButton: FloatingActionButton(
+        shape: CircleBorder(),
+        onPressed: () {
+          Navigator.pushNamed(context, '/camera');
+        },
+        child: Icon(Icons.camera_alt_outlined),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        notchMargin: 8,
+        child: Text('BottomAppBar'),
+      ),
     );
   }
 }

@@ -30,8 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get_it: ^8.0.3
   provider: ^6.1.4
   shared_preferences: ^2.5.3
+  camera: ^0.11.1
 
 
 dev_dependencies:

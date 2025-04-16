@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 class AppRoutes {
   static final routes = <String, WidgetBuilder>{
     '/home': (context) => HomePage(),
+    '/camera': (context) => CameraPage(),
     '/settings': (context) => SettingsPage(),
   };
 }
