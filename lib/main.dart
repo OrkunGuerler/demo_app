@@ -1,9 +1,9 @@
+import 'package:flutter/material.dart';
+import 'app.dart';
 import 'package:camera/camera.dart';
-import 'package:demo_app/app.dart';
+import 'package:provider/provider.dart';
 import 'package:demo_app/core/di/get_cameras.dart';
 import 'package:demo_app/core/utils/theme_provider.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

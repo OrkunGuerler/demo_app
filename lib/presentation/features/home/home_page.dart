@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/presentation/routes/app_routes.dart';
 import 'package:demo_app/core/widgets/app_bar.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,16 +14,13 @@ class HomePage extends StatelessWidget {
       drawer: Drawer(
         child: ListView(
           children: [
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, '/settings');
-              },
-              child: SizedBox(
-                height: 75,
-                child: Row(
-                  children: [Icon(Icons.settings_outlined), Text('Settings')],
-                ),
+            ListTile(
+              title: Row(
+                children: [Icon(Icons.settings_outlined), Text('Settings')],
               ),
+              onTap: () {
+                Navigator.pushNamed(context, AppRoutes.settings);
+              },
             ),
           ],
         ),
@@ -30,7 +28,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
         onPressed: () {
-          Navigator.pushNamed(context, '/camera');
+          Navigator.pushNamed(context, AppRoutes.camera);
         },
         child: Icon(Icons.camera_alt_outlined),
       ),

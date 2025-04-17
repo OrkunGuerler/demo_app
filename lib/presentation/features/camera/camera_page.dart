@@ -5,7 +5,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/di/get_cameras.dart';
 
-import 'views/display_picture_page.dart';
+import 'views/display_picture_view.dart';
 
 class CameraPage extends StatefulWidget {
   const CameraPage({super.key});
@@ -66,7 +66,7 @@ class CameraPageState extends State<CameraPage> {
 
             if (!context.mounted) return;
 
-            await Navigator.of(context).push(
+            await Navigator.of(context).pushReplacement(
               MaterialPageRoute(
                 builder:
                     (context) => DisplayPictureScreen(imagePath: image.path),
